@@ -1,0 +1,7 @@
+{
+  "name": "busic-sidemenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

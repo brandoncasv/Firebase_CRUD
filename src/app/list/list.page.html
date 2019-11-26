@@ -1,0 +1,28 @@
+<ion-header color="danger">
+  <ion-toolbar class="ion-text-center" >
+    Detalles
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines ="full">
+      <ion-item *ngIf="contact">
+        <ion-input required type="text" placeholder="Nombre"
+        [(ngModel)]="contact.Nombre"></ion-input>
+      </ion-item>
+    <ion-item *ngIf="contact">
+      <ion-input required type="text" placeholder="Correo"
+                 [(ngModel)]="contact.Correo"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="full" (click)="save_Contact()">Guardar</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+    <ion-fab-button color="danger" routerLink="/" routerDirection="forward" (click)="delete_Contact(contact_Id)">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
